@@ -58,33 +58,51 @@ nav {
   color: black;
 }
 
-/* Add a color to the active/current link 
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-} */
-
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
+  nav {
+    padding-top: 0px;
+    font-size: 2px;
+  }
+  .topnav a {
     float: none;
     display: block;
-    font-size: 20px;
-    padding: 0px 10px;
-  }
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
+    padding: 0px;
   }
   header img {
   height: 65%;
-  width: 45%;
+  width: 55%;
   padding: 5px;
 }
 }
 
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  header {
+    height: 100px;
+  }
+  nav {
+    padding-top: 0px;
+  }
+  .topnav a {
+    font-size: 16px;
+    padding: 0px;
+  }
+  #header-logo {
+    width: 45%;
+  }
+  header img {
+  height: 75%;
+  width: 55%;
+  padding: 5px;
+}
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav a {
+    font-size: 24px;
+    padding: 10px 10px;
+  }
+}
 
 /* MAIN --------------------------------------------- */
 
@@ -98,16 +116,6 @@ section {
    /* activate to view section dimensions
   background-color: purple;*/
   margin-top: 40px; 
-}
-
-@media screen and (max-width: 600px) {
-  section {
-    margin: auto;
-    height: auto;
-    width: 100%;
-    padding-top: none;
-    min-height: none;
-  }
 }
 
 /* section sizing */
@@ -133,6 +141,16 @@ h4 {
   font-size: 24px;
 }
 
+@media screen and (max-width: 600px) {
+  section {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    padding-top: none;
+    min-height: none;
+  }
+}
+
 /* WELCOME SECTION -------------------------------------------*/
 
 /* Styles section subtitle */
@@ -151,6 +169,11 @@ h4 {
   line-height: 150%;
 }
 
+#contact-section-link {
+  color: #d49023;
+  font-weight: bold;
+}
+
 /* Mobile sizing for section text */
 @media screen and (max-width: 600px) {
   #title {
@@ -162,6 +185,12 @@ h4 {
   #header-description {
     margin: auto;
     line-height: auto;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  #header-description {
+    margin: auto;
   }
 }
 
@@ -181,13 +210,6 @@ h4 {
   color: #FFFFFF;
 }
 
-/* Mobile sizing font */
-@media screen and (max-width: 600px) {
-  #project-section-title {
-    font-size: 38px;
-  }
-}
-
 /* Project rows & columns */
 .project-row {
   display: flex;
@@ -195,7 +217,7 @@ h4 {
 }
 
 .project-column {
-  width: 33.3%;
+  width: 33%;
   padding: 5px;
   float: left;
 }
@@ -207,8 +229,9 @@ h4 {
 /* Style project tiles */
 .project-tile {
   background: white;
-  width: 95%;
+  width: 100%;
   margin: 20px 0px 20px 10px;
+  padding-right: 20px;
 }
 
 /* Style tile imgs */
@@ -222,19 +245,6 @@ h4 {
 
 .project-img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-/* Mobile sizing */
-@media screen and (max-width: 600px) {
-  .project-column {
-    width: 100%;
-  }
-  .project-row {
-    display: inline-block;
-  }
-  .project-tile {
-    margin: auto;
-  }
 }
 
 /* Button styling */
@@ -259,6 +269,34 @@ button:hover {
   color: white;
 }
 
+/* Mobile sizing */
+@media screen and (max-width: 600px) {
+   #project-section-title {
+    font-size: 38px;
+  }
+  .project-column {
+    width: 100%;
+  }
+  .project-row {
+    display: inline-block;
+  }
+  .project-tile {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .project-column {
+    width: 100%;
+  }
+  .project-row {
+    display: inline-block;
+  }
+  .project-tile {
+    margin: auto;
+    padding: 30px;
+  }
+}
 
 /* CONTACT SECTION -----------------------------------------*/
 
@@ -293,5 +331,9 @@ button:hover {
 
 /* Mobile sizing contact links */
 @media only screen and (max-width: 600px) {
+  .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
   .contact-links {width: 100%;}
 }
